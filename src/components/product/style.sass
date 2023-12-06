@@ -1,0 +1,146 @@
+section#product
+    gap: 2em
+    width: 100%
+    padding: 4em
+
+    .content
+        gap: 1em
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+
+    .pagination
+        gap: 1em
+        width: 100%
+        display: flex
+        margin-top: 2em
+        align-items: center
+        justify-content: center
+
+        button
+            color: #fff
+            display: flex
+            cursor: pointer
+            font-size: 0.8em
+            align-items: center
+            border-radius: .3em
+            padding: 0.3em 1.6em
+            justify-content: center
+            background: var(--green)
+            text-transform: uppercase
+
+            &:disabled
+                cursor: not-allowed
+                background: lightgrey
+
+        .count
+            opacity: 0.5
+            display: flex
+            padding: 1.2em
+            cursor: pointer
+            align-items: center
+            justify-content: center
+            border-radius: 20em 10%
+            font-variant: small-caps
+            background: var(--white)
+            text-shadow: .06em .06em 2px var(--dark-green)
+            box-shadow: 0.1em 0.1em 0.1em var(--green), -0.1em -0.1em 0.1em var(--dark-green)
+
+            &:hover
+                color: var(--white)
+                background: var(--green)
+
+div.single-product
+    width: 100%
+    display: flex
+    height: auto
+    padding: 1em
+    flex: 1 0 auto
+    margin-bottom: 3em
+    flex-direction: column
+
+    .main
+        gap: 3em
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        padding: 2em 10%
+        background: var(--white)
+
+        .grid
+            // gap: 2em
+            display: flex
+            flex: 1 0 20em
+            max-height: 30em
+            position: relative
+            flex-direction: column
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                max-height: inherit
+
+            .header
+                width: 100%
+                display: flex
+                padding: 1em 0 0
+                align-items: flex-start
+                justify-content: space-between
+
+                h2
+                    max-width: 70%
+                    text-transform: uppercase
+                    font-size: clamp(1.4em, 2.6vw, 4em)
+
+            .price
+                gap: 1em
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: flex-start
+
+                span
+                    font-weight: 700
+                    color: var(--green)
+
+            p
+                font-size: 1em
+                margin-top: 1em
+                color: darkgrey
+                font-family: serif
+
+            .buttons
+                gap: 2em
+                width: 100%
+                display: flex
+                margin-top: 3em
+                align-items: center
+                justify-content: space-between
+
+                
+
+                .inputs
+                    gap: -1px
+                    display: flex
+
+                    &>*
+                        width: 2.5em
+                        height: 2.5em
+                        display: flex
+                        text-align: center
+                        align-items: center
+                        border: 1px solid grey
+                        justify-content: center
+
+                        &:not(input):disabled
+                            opacity: 0.2
+                            background: grey
+                            cursor: not-allowed
+
+                    input
+                        border-left: none
+                        border-right: none
+                        background: transparent

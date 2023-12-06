@@ -1,0 +1,63 @@
+form#newsletter
+    gap: 1em
+    flex: none
+    display: flex
+    flex-direction: column
+    width: min(24em, 90vw)
+    align-items: flex-start
+
+    h3
+        font-size: 1.2em
+        font-weight: 700
+        color: var(--black)
+
+    div
+        width: 100%
+        height: 3em
+        display: flex
+        border-radius: .4em
+        background: var(--white)
+        border: .2em solid var(--dark-green)
+
+        input
+            flex: 1
+            border: none
+            outline: none
+            padding: 0.4em 1em
+
+            &:disabled
+                color: grey
+
+        button
+            display: flex
+            cursor: pointer
+            padding: .5em 2em
+            transition: 200ms
+            align-items: center
+            justify-content: center
+            background: var(--dark-green)
+            border-top-left-radius: inherit
+            border-bottom-left-radius: inherit
+
+            &:hover
+                transform: scale(.8)
+                border-radius: inherit
+
+            &:active
+                transform: scale(.8) translateX(-1em)
+
+            &:disabled
+                background: grey
+                pointer-events: none
+                transform: scale(.8)
+                border-radius: inherit
+
+                svg
+                    animation: spin 1s linear infinite
+
+            svg
+                color: var(--white)
+
+@keyframes spin
+    to
+        transform: rotate(360deg)

@@ -1,0 +1,108 @@
+header
+    top: 0
+    gap: 2em
+    width: 100%
+    z-index: 100
+    display: flex
+    padding: 1em 10%
+    transition: 200ms
+    align-items: center
+    justify-content: space-between
+
+    #logo
+        img
+            height: 4em
+            object-fit: contain
+
+    a
+        display: flex
+        font-weight: 500
+        align-items: center
+        flex-direction: column
+        justify-content: center
+        text-transform: capitalize
+
+    nav
+        flex: 1
+        gap: 2em
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:first-of-type
+            a
+                display: flex
+                align-items: center
+                flex-direction: column
+                justify-content: center
+
+                svg
+                    display: none
+                    font-size: 1.4rem
+
+            @media screen and (max-width: 50em)
+                left: 0
+                bottom: 0
+                width: 100%
+                position: fixed
+                background: var(--white)
+                justify-content: space-evenly
+                height: var(--header-mobile-height)
+                box-shadow: 0 -0.2em .2em rgba(0 0 0 / .2)
+
+                a
+                    font-size: .9em
+
+                    svg
+                        display: flex
+
+        svg
+            cursor: pointer
+
+        &.buttons
+            gap: 1em
+            flex: none
+            justify-content: flex-end
+
+            @media screen and (max-width: 50em)
+                font-size: .7em
+
+            a
+                transition: 200ms
+                position: relative
+                font-variant: small-caps
+                text-transform: lowercase
+                text-decoration: underline
+
+                &.btn
+                    color: white
+                    transition: 400ms
+                    border-radius: 1em
+                    text-decoration: none
+                    transition: 100ms linear
+                    padding: .1em 1.7em .3em
+                    background: var(--dark-green)
+
+                    &:hover
+                        background: var(--green)
+
+                svg
+                    color: grey
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+
+                span:not(:empty)
+                    left: 80%
+                    bottom: 80%
+                    width: .8rem
+                    height: .8rem
+                    display: flex
+                    font-size: 0.4em
+                    border-radius: 3em
+                    position: absolute
+                    color: var(--white)
+                    align-items: center
+                    justify-content: center
+                    background: var(--dark-green)

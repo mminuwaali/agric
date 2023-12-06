@@ -1,0 +1,92 @@
+section#contact
+    gap: 2em
+    width: 100%
+    display: grid
+    padding: 3em 0
+    background: var(--white)
+    grid-template-columns: repeat(auto-fit, minmax(24em, 2fr))
+
+    .grid
+        gap: 1em
+        flex: 1 auto
+        display: flex
+        padding-inline: 10%
+        flex-direction: column
+        justify-content: flex-start
+
+        h2
+            font-weight: 600
+            font-size: clamp(1.6em, 4vw, 4em)
+
+        button
+            width: 100%
+            display: flex
+            padding: .8em
+            font-size: .8em
+            text-align: center
+            color: var(--white)
+            border-radius: .5em
+            align-items: center
+            justify-content: center
+            background: var(--black)
+            text-transform: uppercase
+
+            &:disabled
+                background: grey
+                pointer-events: none
+
+            svg
+                color: var(--white)
+                animation: spin 1s linear infinite
+
+        .inputs
+            gap: 1.5em
+            display: flex
+            flex-wrap: wrap
+            align-items: flex-start
+            justify-content: flex-start
+
+            .group
+                flex: 1 14em
+                display: flex
+                position: relative
+
+                &.full
+                    flex: none
+                    width: 100%
+                    margin-top: 1em
+
+                label
+                    left: 2%
+                    top: 1.7em
+                    z-index: 12
+                    padding: 0 1em
+                    font-size: 0.8em
+                    border-radius: 1em
+                    position: absolute
+                    pointer-events: none
+                    background: transparent
+                    transition: 100ms ease-out
+                    transform: translateY(-50%)
+
+                input, textarea
+                    flex: 1 auto
+                    resize: none
+                    outline: none
+                    padding: .5em 1em
+                    position: relative
+                    border-radius: .5em
+                    background: transparent
+                    border: .1em solid var(--green)
+
+                    &:-webkit-autofill
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: var(--black)
+
+                    &::placeholder
+                        color: transparent
+
+                    &:focus, &:not(:empty), &:not(:placeholder-shown)
+                        & + label
+                            top: 0%
+                            background: var(--white)
