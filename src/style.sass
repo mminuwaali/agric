@@ -1,0 +1,58 @@
+@import 'tailwindcss/base'
+@import 'tailwindcss/utilities'
+@import 'tailwindcss/components'
+
+:root // setting the css varibales, don't forget to update tailwind config file too
+    --cyan: #80ff00
+    --clay: #FAFAFA
+    --green: #387549
+    --black: #000000
+    --white: #ffffff
+    --crimson: #dc143c
+    --dark-green: #099404
+    --header-mobile-height: 4em
+
+* // general styling, reseting margin and padding
+    margin: 0
+    padding: 0
+    max-width: 100vw
+    box-sizing: border-box
+
+body // setting the body'swith and some other properties
+    width: 100%
+    height: 100vh
+    // overflow: auto
+
+    & :is(#root, #portal) // setting the root and portal elements
+        width: 100%
+        height: 100vh
+        display: flex
+        overflow: auto
+        align-items: center
+        justify-content: center
+
+    #root // this is solely for root element
+        align-items: initial
+        flex-direction: column
+        background: var(--clay)
+        justify-content: flex-start
+
+        &::-webkit-scrollbar
+            display: none
+
+        section
+            flex: none
+            width: 100%
+
+    #portal // portal style, it only shows when there are children elements
+        top: 0
+        left: 0
+        z-index: 1000
+        position: fixed
+        transition: 400ms
+        backdrop-filter: blur(.2em)
+        background-color: rgba(0 0 0 / .4)
+
+        &:empty // hide portal element if empty
+            opacity: 0
+            pointer-events: none

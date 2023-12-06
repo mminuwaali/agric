@@ -1,0 +1,51 @@
+.carousel-card
+    width: 100%
+    height: 100%
+    display: flex
+    position: absolute
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: absolute
+
+    .details
+        flex: 1
+        display: flex
+        padding: 20% 10%
+        position: relative
+        align-items: center
+        // mix-blend-mode: multiply
+        justify-content: flex-start
+        background: rgba(0 0 0 / .5)
+
+        @media screen and (max-width: 50rem)
+            align-items: flex-end
+            justify-content: center
+
+            h2
+                text-align: center
+
+        h2
+            line-height: 1.2
+            overflow: hidden
+            color: var(--white)
+            width: max(40vw, 12em)
+            font-size: clamp(1.2em, 3vw, 4em)
+            text-shadow: 2px 2px rgba(0 0 0 /.1)
+
+//             span
+//                 // overflow: hidden
+//                 display: inline
+//                 opacity: 0
+//                 animation: pop-up 500ms calc(var(--char-index) * 100ms) forwards
+
+// @keyframes pop-up
+//     0%
+//         opacity: 0
+//         transform: translateY(100%)
+
+//     100%
+//         opacity: 1
+//         transform: translateY(0)

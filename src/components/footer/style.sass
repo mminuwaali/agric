@@ -1,0 +1,66 @@
+footer
+    gap: 4em
+    width: 100%
+    display: flex
+    padding: 3em 5%
+    background: #ffffff
+    flex-direction: column
+
+    @media screen and (max-width: 50rem)
+        margin-bottom: var(--header-mobile-height)
+
+        .column
+            justify-content: space-around !important
+
+    .logo
+        height: 8em
+
+    .column
+        gap: 2em
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-end
+        justify-content: space-between
+
+        &:first-child
+            align-items: flex-start
+
+        nav
+            gap: 1em
+            flex: 0 22em
+            display: flex
+            flex-wrap: wrap
+
+            div
+                gap: 1.2em
+                flex: 0 10em
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+
+                a
+                    font-weight: 500
+                    flex-wrap: nowrap
+
+        .social-links
+            gap: 1em
+            display: flex
+            align-items: center
+            justify-content: center
+
+            a
+                width: 2.2em
+                height: 2.2em
+                display: grid
+                cursor: pointer
+                transition: 300ms
+                color: var(--white)
+                border-radius: .5em
+                text-decoration: none
+                place-content: center center
+                background: var(--dark-green)
+
+                &:hover
+                    transform: translateY(.4em)

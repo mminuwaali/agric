@@ -1,0 +1,60 @@
+section#summary
+    gap: 3em
+    margin: auto
+    padding: 2em
+    display: grid
+    padding-inline: 10%
+    justify-content: center
+    box-shadow: .2em .2em 1em rgba(0 0 0 / .12)
+    --width: clamp(16em, 75vw, 100vw) !important
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr))
+
+    .flex
+        gap: .4em
+        padding: 1em
+        display: flex
+        cursor: pointer
+        overflow: hidden
+        position: relative
+        align-items: center
+        flex-direction: column
+
+        & *
+            z-index: 1
+
+        &::before
+            left: 0
+            bottom: 0
+            z-index: 0
+            content: ''
+            width: 100%
+            height: 1px
+            position: absolute
+            transition: 300ms ease
+            background: var(--green, red)
+            // background: red
+
+        &:hover
+            &::before
+                height: 100%
+
+            *
+                color: var(--white)
+
+            img
+                filter: invert(1)
+
+        img
+            margin-bottom: 1em
+            object-fit: contain
+
+        h3
+            color: black
+            text-align: center
+            transition: 300ms ease
+
+        p
+            font-size: .9em
+            text-align: center
+            transition: 300ms ease
+            color: rgba(0 0 0 / .6)

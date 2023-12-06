@@ -1,0 +1,71 @@
+section#blog
+    width: 100%
+    padding: 4em
+
+    .content
+        gap: 1em
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+
+    .pagination
+        gap: 1em
+        width: 100%
+        display: flex
+        margin-top: 2em
+        align-items: center
+        justify-content: center
+
+        button
+            color: #fff
+            display: flex
+            cursor: pointer
+            font-size: 0.8em
+            align-items: center
+            border-radius: .3em
+            padding: 0.3em 1.6em
+            justify-content: center
+            background: var(--green)
+            text-transform: uppercase
+
+            &:disabled
+                cursor: not-allowed
+                background: lightgrey
+
+        .count
+            opacity: 0.5
+            display: flex
+            padding: 1.2em
+            cursor: pointer
+            align-items: center
+            justify-content: center
+            border-radius: 20em 10%
+            font-variant: small-caps
+            background: var(--white)
+            text-shadow: .06em .06em 2px var(--dark-green)
+            box-shadow: 0.1em 0.1em 0.1em var(--green), -0.1em -0.1em 0.1em var(--dark-green)
+
+            &:hover
+                color: var(--white)
+                background: var(--green)
+
+section#blog-detail
+    gap: 0.5em
+    width: 100%
+    display: flex
+    padding: 4em 10%
+    flex-direction: column
+
+    img
+        width: 80%
+        margin: auto
+        max-height: 70vh
+        align-self: center
+        object-fit: contain
+
+    h1,h2,h3,h4,h5,h6
+        font-size: 1.6em
+        color: var(--dark-green)
+        // text-decoration: underline
